@@ -5,7 +5,13 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-  path: '',
+    path: '',
+    loadChildren: './+login/login.module#LoginModule',
+    data: {
+      customLayout: true
+    }
+  }, {
+  path: 'dashboard',
   data: {
       title: 'Get Started'
   },
